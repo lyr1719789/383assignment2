@@ -56,4 +56,4 @@ Modified_file_3.close()
 
 
 os.system("sudo /google/google-cloud-sdk/bin/gcloud components update")
-os.system("sudo /google/google-cloud-sdk/bin/gcloud app deploy")
+os.system("sudo gcloud app deploy")
