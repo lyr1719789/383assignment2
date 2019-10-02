@@ -13,7 +13,7 @@ os.system("gcloud compute instances attach-disk deployment-vm --disk backup")
 
 # 数据库添加网络，google sql connect instance
 os.system("gcloud sql instances patch my-moodle --assign-ip")
-os.system("gcloud sql instances patch my-moodle --authorized-networks=%s")%manual.ip
+os.system("gcloud sql instances patch my-moodle --authorized-networks=%s"%manual.ip)
 
 # 配置phpmyadmin
 os.system("wget https://files.phpmyadmin.net/phpMyAdmin/4.6.3/phpMyAdmin-4.6.3-all-languages.tar.bz2 ")
