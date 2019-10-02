@@ -24,10 +24,9 @@ pathOfphp = os.path.abspath('phpMyAdmin')
 # create app.yaml
 os.chdir(pathOfphp)
 os.system("sudo touch app.yaml")
-pathOfapp = os.path.abspath('app.yaml')
-os.chdir(pathOfapp)
 os.system("sudo chmod o+r app.yaml")
 os.system("sudo chmod o+w app.yaml")
+pathOfapp = os.path.abspath('app.yaml')
 yaml="service: default\nruntime: php55\napi_version: 1\n\nhandlers:\n\n- url: /(.+\.(ico|jpg|png|gif))$\n  static_files: \\1\n  upload: (.+\.(ico|jpg|png|gif))$\n  application_readable: true\n\n- url: /(.+\.(htm|html|css|js))$\n  static_files: \\1\n  upload: (.+\.(htm|html|css|js))$\n  application_readable: true\n\n- url: /(.+\.php)$\n  script: \\1\n  login: admin\n\n- url: /.*\n  script: index.php\n  login: admin"
 Modified_file_1 = open(pathOfapp,"w")
 Modified_file_1.write(yaml)
