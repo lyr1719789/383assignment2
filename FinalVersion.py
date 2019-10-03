@@ -57,6 +57,6 @@ Modified_file_3 = open(pathOfini,"w")
 Modified_file_3.write(php)
 Modified_file_3.close()
 
-
+os.system("gcloud config set project %s"%manual.project)
 os.system("sudo /google/google-cloud-sdk/bin/gcloud components update")
 os.system("sudo gcloud app deploy")
