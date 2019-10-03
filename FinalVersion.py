@@ -21,6 +21,9 @@ os.system("mkdir phpMyAdmin")
 os.system("tar -xvf phpMyAdmin-4.6.3-all-languages.tar.bz2 -C phpMyAdmin --strip-components=1")
 pathOfphp = os.path.abspath('phpMyAdmin')
 
+#启用app engune
+os.system("gcloud app create")
+
 # create app.yaml
 os.chdir(pathOfphp)
 os.system("sudo touch app.yaml")
