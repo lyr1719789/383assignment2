@@ -7,8 +7,8 @@ def GenerateConfig(context):
       'name': 'deployment-vm',
       'type': 'compute.v1.instance',
       'properties': {
-          'zone': 'asia-southeast1-b',
-          'machineType': 'zones/asia-southeast1-b/machineTypes/n1-standard-1',
+          'zone': 'us-central1-a',
+          'machineType': 'zones/us-central1-a/machineTypes/n1-standard-1',
           'disks': [{
               'deviceName': 'boot',
               'type': 'PERSISTENT',
