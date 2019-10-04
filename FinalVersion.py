@@ -20,6 +20,8 @@ os.system("wget https://files.phpmyadmin.net/phpMyAdmin/4.6.3/phpMyAdmin-4.6.3-a
 os.system("mkdir phpMyAdmin")
 os.system("tar -xvf phpMyAdmin-4.6.3-all-languages.tar.bz2 -C phpMyAdmin --strip-components=1")
 pathOfphp = os.path.abspath('phpMyAdmin')
+os.system("sudo chmod o+r phpMyAdmin ")
+os.system("sudo chmod o+w phpMyAdmin ")
 
 #启用app engine
 os.system("gcloud app create")
