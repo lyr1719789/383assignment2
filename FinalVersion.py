@@ -7,7 +7,7 @@ os.system("gcloud compute instances delete-access-config deployment-vm --access-
 os.system("gcloud compute instances add-access-config deployment-vm --access-config-name \"External NAT\" --address %s"%manual.ip)
 
 # 创建磁盘 --project=projectname,create disk
-os.system("gcloud beta compute disks create backup --project=%s --type=pd-standard --size=500GB --zone=us-central1-a --physical-block-size=4096"%manual.project)
+os.system("gcloud beta compute disks create backup --project=%s --type=pd-standard --size=500GB --zone=asia-southeast1-b --physical-block-size=4096"%manual.project)
 # 连接磁盘 --disk=diskname, connect disk
 os.system("gcloud compute instances attach-disk deployment-vm --disk backup")
 
