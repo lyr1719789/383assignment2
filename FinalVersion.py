@@ -10,7 +10,7 @@ print("vm instance finished")
 os.system("gcloud compute --project=%s firewall-rules create for-apache --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:80 --source-ranges=0.0.0.0/0"%manual.project)
 
 os.system("gcloud compute --project=%s firewall-rules create open-ports1 --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:6000-7000 --source-ranges=0.0.0.0/0"%manual.project)
-os.system("gcloud compute --project=%s firewall-rules create open-ports2--direction=EGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:6000-7000 --destination-ranges=0.0.0.0/0"%manual.project)
+os.system("gcloud compute --project=%s firewall-rules create open-ports2 --direction=EGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:6000-7000 --destination-ranges=0.0.0.0/0"%manual.project)
 os.system("gcloud compute --project=%s firewall-rules create open-ports3 --direction=EGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:20-21 --destination-ranges=0.0.0.0/0"%manual.project)
 os.system("gcloud compute --project=%s firewall-rules create open-ports4 --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:20-21 --source-ranges=0.0.0.0/0"%manual.project)
 
